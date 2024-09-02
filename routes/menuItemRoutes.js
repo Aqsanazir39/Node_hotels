@@ -52,4 +52,5 @@ router.get('/:tasteType', async(req, res)=>{
     res.status(500).json({err: 'internal server error'});
   }
 })
+//export the router
   module.exports = router;
