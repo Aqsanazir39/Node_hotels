@@ -10,6 +10,7 @@ try{
 
   //save newPerson to the database
   const response = await newPerson.save(); 
+  
 console.log('data saved');
 res.status(200).json(response);
 

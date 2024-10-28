@@ -2,8 +2,11 @@ const express = require('express');
 const app = express();
 const db = require('./db');
 
+require("dotenv").config();
+
 const bodyParser = require('body-parser');
 app.use(bodyParser.json());
+const PORT = process.env.PORT || 3000;
 
 const MenuItems = require('./models/menuItem');
 const MenuItem = require('./models/menuItem');
@@ -19,6 +22,7 @@ app.use('/person',personRoutes);
 //import the menu router
 const menuItemRoutes = require('./routes/menuItemRoutes');
 app.use('/menuItem' , menuItemRoutes);
+
 
 //server port
 app.listen(3000, ()=>{
