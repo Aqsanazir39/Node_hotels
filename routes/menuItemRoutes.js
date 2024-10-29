@@ -13,7 +13,7 @@ router.post('/', async(req , res)=>{
     res.status(200).json(response);
     console.log("Menu created successfully");
     }catch(err){
-      console.log(error);
+      console.log(err);
       res.status(500).json({err: 'internal server error'});
     }
    
